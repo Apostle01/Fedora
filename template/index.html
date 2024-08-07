@@ -1,20 +1,15 @@
-<!DOCTYPE>
+<!DOCTYPE html>
 <html>
-    <head>
-        <body>
-    <meta charset="utf-8">   
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">          
-    <link rel="stylesheet" href="">
-    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}"
-    <title>Book Review</title>
+<head>
+    <title>Book Reviews</title>
 </head>
-        </body>
-        <h1>Book Reviews</h1>
-        <ul>
-            {%for review in review%}
-            <li><strong>{{ review.title }}</strong>: {{review.review }}</li>
-            {% endfor %}
-        </ul>
-        <a href="{{ url_for('review') }}"Add a review></a>
-          </body>
+<body>
+    <h1>Book Reviews</h1>
+    <ul>
+        {% for review in reviews %}
+            <li><strong>{{ review.title }}</strong>: {{ review.review }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('review') }}">Add a Review</a>
+</body>
 </html>

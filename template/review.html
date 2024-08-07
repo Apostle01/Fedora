@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Add Review</title>
-    </head>
-        <body>
-            <h1>Add a book review</h1>
-            <form method="post">
-                <label for="title">Book Title:</label>
-                <input type="text" id="title" name="required"><br>
-                <label for="review">Review:</label>
-                <textarea id="review" name="review" required></textarea><br>
-                <button type="submit">Submit</button>
-            </form>
-        </body>
+<head>
+    <title>Add Review</title>
+</head>
+<body>
+    <h1>Add a Book Review</h1>
+    <form action="{{ url_for('review') }}" method="post">
+        <label for="title">Book Title:</label>
+        <input type="text" id="title" name="title" required>
+        <br>
+        <label for="review">Review:</label>
+        <textarea id="review" name="review" required></textarea>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
 </html>
